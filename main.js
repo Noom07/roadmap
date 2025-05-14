@@ -1,6 +1,6 @@
 // Element parent
 const container = document.querySelector("#container")
-
+/*
 const tab = [1,2,3,4,5]
 const tab2 = [
     {
@@ -30,3 +30,4 @@ tab2.forEach((el)=> {
     container.appendChild(testForm)
 })
 
+*/
