@@ -46,7 +46,7 @@ const characters = [
         health : 100,
         magie : 19,
         power : 70
-    },
+    }
 ]
 
-export default characters
+export default characters;

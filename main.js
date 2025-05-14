@@ -1,33 +1,66 @@
+import characters  from "./characters.js"
 // Element parent
 const container = document.querySelector("#container")
-/*
-const tab = [1,2,3,4,5]
-const tab2 = [
-    {
-        name : "Nomena",
-        age : 30
-    },
-    {
-        name : "Jonglebel",
-        age : 22
-    },
-    {
-        name : "Luc",
-        age : 18
-    }
-    
-]
+
+// fonctions pour afficher les data 
+function createData (label, value){
+
+    const dataElement = document.createElement('div')
+     dataElement.classList.add('data')
+
+     // label
+     const labelData = document.createElement('p')
+     labelData.textContent = label
+     dataElement.appendChild(labelData)
+
+     // Value
+     const valueData = document.createElement('p')
+     valueData.textContent = value
+     dataElement.appendChild(valueData)
+
+     return dataElement
+
+
+}
 
 // Créations elements
-tab2.forEach((el)=> {
-    const testForm =  document.createElement("div");
-    testForm.classList.add("testForm")
-    testForm.textContent = el.name
-    const para = document.createElement("p")
-    para.classList.add('para')
-    para.textContent = el.age
-    testForm.appendChild(para)
-    container.appendChild(testForm)
+characters.forEach((el)=> {
+  // creation de la cadre .card
+  const cardElement = document.createElement('div')
+  cardElement.classList.add('card')
+  container.appendChild(cardElement) 
+  
+  //Creation d'image
+  const imgElement = document.createElement("img")
+  imgElement.src = el.image
+  imgElement.alt = el.name
+  imgElement.classList.add("card-img")
+  cardElement.appendChild(imgElement)
+  
+  // creation proprietes
+  const proprietesElement = document.createElement('div')
+  proprietesElement.classList.add('properties')
+  cardElement.appendChild(proprietesElement)
+
+  // Nom de la carte
+  const nameElement = document.createElement("h4")
+  nameElement.classList.add('name-character')
+  nameElement.textContent = el.name
+  proprietesElement.appendChild(nameElement)
+
+  // HP
+  const hpElement = createData(
+    "Point de vie :",
+    el.health + " PV"
+  )
+  proprietesElement.appendChild(hpElement)
+ 
+  // MP 
+  const mpElement = createData(
+    "Point de Magie :",
+    el.power + " ATK"
+  )
+  proprietesElement.appendChild(mpElement)
+
 })
 
-*/
