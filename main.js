@@ -23,6 +23,15 @@ function createData (label, value){
 
 }
 
+// creation Boutton
+function createButton (content){
+  const balise = document.createElement('button')
+  balise.textContent = content
+
+  return balise
+
+}
+
 // Créations elements
 characters.forEach((el)=> {
   // creation de la cadre .card
@@ -61,6 +70,17 @@ characters.forEach((el)=> {
     el.power + " ATK"
   )
   proprietesElement.appendChild(mpElement)
+
+  //boutton
+   const buttonContainer = document.createElement('div')
+   buttonContainer.classList.add("buttons")
+   proprietesElement.appendChild(buttonContainer)
+
+   // bouttons soigner et Attaque
+   const soigner = createButton ('Soigner')
+   const attaquer = createButton ('Attaquer')
+   buttonContainer.appendChild(soigner)
+   buttonContainer.appendChild(attaquer)   
 
 })
 
