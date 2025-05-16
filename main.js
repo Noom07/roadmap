@@ -33,6 +33,7 @@ function createButton (content){
 }
 
 // Créations elements
+
 characters.forEach((el)=> {
   // creation de la cadre .card
   const cardElement = document.createElement('div')
@@ -78,9 +79,29 @@ characters.forEach((el)=> {
 
    // bouttons soigner et Attaque
    const soigner = createButton ('Soigner')
+   
    const attaquer = createButton ('Attaquer')
    buttonContainer.appendChild(soigner)
-   buttonContainer.appendChild(attaquer)   
+
+   soigner.addEventListener('click', ()=>{
+    soigner.classList.add('disabled')
+    hpElement.style.color="green"
+    el.health += 5
+    const upHp = hpElement.querySelector("p:last-child")
+    upHp.textContent = el.health + "PV"
+    setTimeout(() =>{
+      cardElement.classList.add('soigner')
+      hpElement.style.color = "#f1f1f1 "
+    }, 3500)
+   })
+
+   buttonContainer.appendChild(attaquer) 
+   attaquer.addEventListener('click', ()=>{
+    soigner.classList.remove('disabled')
+    cardElement.classList.remove('soigner')
+    
+   })
+
 
 })
 

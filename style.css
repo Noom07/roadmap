@@ -139,3 +139,31 @@
     font-style: italic;
   }
   
+  .buttons .disabled{
+    background-color: grey;
+    pointer-events: none;
+  }
+  
+  .soigner{
+    animation: bounce 3s ease-in-out;
+  }
+  @keyframes bounce {
+    0%{
+      box-shadow: 1px 1px 5px 9px rgba(30,208,57,0.52);
+      -webkit-box-shadow: 1px 1px 5px 9px rgba(30,208,57,0.52);
+      -moz-box-shadow: 1px 1px 5px 9px rgba(30,208,57,0.52);
+    }
+    25%{
+      border: 1px solid #01f35e;
+    }
+ 50%{
+      box-shadow: 1px 1px 5px 9px rgba(30,208,57,0.52);
+      -webkit-box-shadow: 1px 1px 5px 9px rgba(30,208,57,0.52);
+      -moz-box-shadow: 1px 1px 5px 9px rgba(30,208,57,0.52);
+    }
+    
+     75%{
+      border: 1px solid #01f35e;
+    }
+    
+  }
