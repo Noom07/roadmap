@@ -106,10 +106,4 @@ characters.forEach((el)=> {
 })
 
 
-30 aout 2024 - 1 
-07 octobre 2024 - 02 deces de mon frere
-05  decembre 2024 - 0.5 
-05 fevrier 2024 - 1
-premier avertissement - 0.5 20 fevrier
-06 , 07 mars 2025 - 1.5  
-30 avril et 02 mai : 1.5
+
